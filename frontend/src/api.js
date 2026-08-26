@@ -10,9 +10,7 @@
  *   const res = await apiFetch('/api/$expand?q=jvara');
  */
 
-export const API_BASE =
-  import.meta.env.VITE_API_BASE_URL ||
-  'https://namaste-fhir-terminology-0dlp.onrender.com';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
 /**
  * Drop-in replacement for fetch() that automatically prepends API_BASE.
