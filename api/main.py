@@ -66,10 +66,10 @@ app.add_middleware(
 # Layer 4 — Cascading hybrid terminology routes
 app.include_router(health.router)
 app.include_router(metadata.router)
-app.include_router(expand.router)
-app.include_router(translate.router)
-app.include_router(bundle.router)
-app.include_router(analytics.router)
+app.include_router(expand.router, prefix="/api")
+app.include_router(translate.router, prefix="/api")
+app.include_router(bundle.router, prefix="/api")
+app.include_router(analytics.router, prefix="/api")
 app.include_router(claims.router)
 app.include_router(history.router, prefix="/api")
 
